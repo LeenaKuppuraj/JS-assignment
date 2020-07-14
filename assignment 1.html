@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <p> Press the buttons to know day and time </p>
+        <button onclick="myFunction()">Today is:</button>
+        <p id="day"></p>
+        <script>
+            function myFunction(){
+                var d = new Date();
+                var weekday = new Array(7);
+                weekday[0] = "Sunday";
+                weekday[1] = "Monday";
+                weekday[2] = "Tuesday";
+                weekday[3] = "Wednesday";
+                weekday[4] = "Thursday";
+                weekday[5] = "Friday";
+                weekday[6] = "Saturday";
+                var n = weekday[d.getDay()];
+                document.getElementById("day").innerHTML = n;
+            }
+        </script>
+        <button onclick="time()">current time</button>
+        <p id="time"></p>
+            <script>
+                function time() {
+                  var a = new Date();
+                var b = a.toLocaleTimeString();
+                 document.getElementById("time").innerHTML = b;
+            }
+            </script>
+    </body>
+</html>
